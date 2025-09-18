@@ -17,7 +17,6 @@ class MainWindow(QMainWindow):
         self.label.setGeometry(150, 50, 60, 15)
         self.label.setStyleSheet("""
             color: #7085c4;
-            background-color: #732ba6;
         """)
 
         button = QPushButton("Kupa", self)
