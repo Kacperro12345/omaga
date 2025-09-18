@@ -2,7 +2,7 @@ import PySide6
 from PySide6 import QtCore
 
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel
+from PySide6.QtWidgets import *
 
 # Główne okno
 class MainWindow(QMainWindow):
@@ -11,8 +11,18 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Omaga")
         self.setGeometry(750, 400, 400, 300)
 
-        Label = QLabel("Kupa", self)
-        Label.setGeometry(150, 75, 100, 100)
+        self.kupy = 0
+
+        self.Label = QLabel(f"Kupa: {self.kupy}", self)
+        self.Label.setGeometry(150, 50, 100, 100)
+
+        button = QPushButton("Kupa", self)
+        button.setGeometry(150, 200, 100, 40)
+        button.clicked.connect(self.on_click)
+
+    def on_click(self):
+        self.kupy += 1
+        self.Label.setText(f"Kupy: {self.kupy}")
 
 # Standardowy boilerplate
 if __name__ == "__main__":
