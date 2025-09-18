@@ -13,8 +13,12 @@ class MainWindow(QMainWindow):
 
         self.kupy = 0
 
-        self.Label = QLabel(f"Kupa: {self.kupy}", self)
-        self.Label.setGeometry(150, 50, 100, 100)
+        self.label = QLabel(f"Kupa: {self.kupy}", self)
+        self.label.setGeometry(150, 50, 60, 15)
+        self.label.setStyleSheet("""
+            color: #7085c4;
+            background-color: #732ba6;
+        """)
 
         button = QPushButton("Kupa", self)
         button.setGeometry(150, 200, 100, 40)
@@ -22,7 +26,7 @@ class MainWindow(QMainWindow):
 
     def on_click(self):
         self.kupy += 1
-        self.Label.setText(f"Kupy: {self.kupy}")
+        self.label.setText(f"Kupy: {self.kupy}")
 
 # Standardowy boilerplate
 if __name__ == "__main__":
