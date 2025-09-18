@@ -8,12 +8,11 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QLabel
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Moja pierwsza aplikacja w PySide6")  # tytuł okna
-        self.setGeometry(100, 100, 400, 300)  # pozycja x, y, szerokość, wysokość
+        self.setWindowTitle("Omaga")
+        self.setGeometry(750, 400, 400, 300)
 
-        # Przykładowy label
-        label = QLabel("Siema, to PySide6 działa!", self)
-        label.setGeometry(50, 50, 200, 40)  # ustawiamy prostokąt (x, y, szer, wys)
+        Label = QLabel("Kupa", self)
+        Label.setGeometry(150, 75, 100, 100)
 
 # Standardowy boilerplate
 if __name__ == "__main__":
