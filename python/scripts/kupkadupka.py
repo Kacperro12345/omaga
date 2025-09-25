@@ -15,9 +15,9 @@ class MainWindow(QMainWindow):
 
         self.label = QLabel(f"Kupa: {self.kupy}", self)
         self.label.setGeometry(150, 50, 60, 15)
-        self.label.setStyleSheet("""
-            color: #7085c4;
-        """)
+
+        self.place = QLineEdit()
+        self.place.setPlaceholderText("Wpisz tu co chcesz obliczyc")
 
         button = QPushButton("Kupa", self)
         button.setGeometry(150, 200, 100, 40)
