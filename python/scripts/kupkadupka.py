@@ -8,24 +8,15 @@ from PySide6.QtWidgets import *
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Omaga")
-        self.setGeometry(750, 400, 400, 300)
+        self.setWindowTitle("Omaga kalkulejtor")
+        self.setGeometry(750, 400, 320, 500)
 
-        self.kupy = 0
+        self.layout = QGridLayout()
 
-        self.label = QLabel(f"Kupa: {self.kupy}", self)
-        self.label.setGeometry(150, 50, 60, 15)
+        btn1 = QPushButton("1")
 
-        self.place = QLineEdit()
-        self.place.setPlaceholderText("Wpisz tu co chcesz obliczyc")
 
-        button = QPushButton("Kupa", self)
-        button.setGeometry(150, 200, 100, 40)
-        button.clicked.connect(self.on_click)
 
-    def on_click(self):
-        self.kupy += 1
-        self.label.setText(f"Kupy: {self.kupy}")
 
 # Standardowy boilerplate
 if __name__ == "__main__":
