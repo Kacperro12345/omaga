@@ -13,7 +13,10 @@ class MainWindow(QMainWindow):
 
         self.layout = QGridLayout()
 
-        btn1 = QPushButton("1")
+
+        def click(self):
+            print("Kliknięto przycisk!")
+            
 
 
 
